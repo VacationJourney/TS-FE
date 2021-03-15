@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
+import ApolloWrapper from './Providers/ApolloWrapper'
+import Auth0ProviderWithHistory from './Providers/auth0-provider-with-history';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Auth0ProviderWithHistory>
+      <ApolloWrapper>
+        <App />
+      </ApolloWrapper>
+    </Auth0ProviderWithHistory>
+  </Router>,
   document.getElementById('root')
 );
 
