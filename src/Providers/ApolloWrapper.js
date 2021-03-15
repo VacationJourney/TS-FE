@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
-import { ApolloClient, createHttpLink, ApolloProvider, NormalizedCacheObject } from '@apollo/client'
+import { ApolloClient, createHttpLink, ApolloProvider } from '@apollo/client'
 import { onError } from 'apollo-link-error'
 import {cache} from '../utils/Cache'
 import { setContext } from 'apollo-link-context'
@@ -37,10 +37,12 @@ const ApolloWrapper = ({ children }) => {
       graphQLErrors.map(({ message, locations, path }) => {
         console.log(
           `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-        );
+        )
         if (message.includes('not authenticated')) {
+          
           return history.push('/');
         }
+        return null
       });
     }
     if (networkError) {
