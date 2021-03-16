@@ -1,0 +1,25 @@
+#AdventureName{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  width: 90%;
+}
+
+@media only screen and (min-width: 800px){
+  #AdventureName{
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1000px){
+  #AdventureName{
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1400px){
+  
+  #AdventureName{
+    width: 30%;
+  }
+  
+}
