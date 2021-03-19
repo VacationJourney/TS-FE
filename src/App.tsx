@@ -10,6 +10,7 @@ import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
