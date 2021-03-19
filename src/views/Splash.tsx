@@ -4,7 +4,7 @@ import Logo2 from '../components/Splash/LogoBottom'
 
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button, Typography } from '@material-ui/core'
-import {useStyles} from '../Styles/Splash'
+import {useStyles} from '../Styles/SplashStyle'
 
 const Splash: React.FC = () => {
   const classes = useStyles()
