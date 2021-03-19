@@ -63,7 +63,7 @@ const EventDrawer = ({ event, selectedEvent, setSelectedEvent, time, tripCal, va
       <div className={`${selectedEvent === event.id ? 'eventDrawerOverlay' : ''}`}
         onClick={() => setSelectedEvent('')}
       ></div>
-      <div className={`eventDrawer ${selectedEvent === event.id ? 'eventDrawer__open' : ''}`} >
+      <section className={`eventDrawer ${selectedEvent === event.id ? 'eventDrawer__open' : ''}`} >
         <EditIcon className='editModalButton' onClick={openModal} />
         <ul className='eventDetails'>
           <li className='detail'>{event.title} <span /> ${event.cost}</li>
@@ -83,7 +83,7 @@ const EventDrawer = ({ event, selectedEvent, setSelectedEvent, time, tripCal, va
             editSubmit={editSubmit}
           />
         </Modal>
-      </div>
+      </section>
     </>
   )
 }
