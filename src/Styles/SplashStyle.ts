@@ -34,13 +34,13 @@ export const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     bottom: 20
   },
-  h3: {
+  line: {
     margin: 5,
     color: 'white',
-    fontSize: '1.5rem',
+    
     textShadow: '1px 3px 3px pink',
-    [theme.breakpoints.up("md")]: {
-      fontSize: '2.5rem',
+    [theme.breakpoints.up("lg")]: {
+      
       color: 'black',
     }
   },
@@ -62,9 +62,10 @@ export const useStyles = makeStyles((theme) => ({
     color: '#FFFDFD',
     transition: '.06s ease-in-out',
   },
-  li: {
+  detail: {
     margin: '1%',
     width: '90%',
+    padding: '.5% 0',
     border: '1px solid pink',
     [theme.breakpoints.up("md")]: {
       width: '30%',
@@ -91,9 +92,6 @@ export const useStyles = makeStyles((theme) => ({
   quote: {
     color: "#ff66c3",
     marginBottom: '10%',
-    [theme.breakpoints.up("md")]:{
-      fontSize: '1.3rem'
-    }
   },
   register: {
     background: 'white',
