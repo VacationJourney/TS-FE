@@ -4,7 +4,7 @@ import Logo2 from '../components/Splash/LogoBottom'
 
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button, Typography } from '@material-ui/core'
-import {useStyles} from '../Styles/Splash'
+import {useStyles} from '../Styles/SplashStyle'
 
 const Splash: React.FC = () => {
   const classes = useStyles()
@@ -18,27 +18,27 @@ const Splash: React.FC = () => {
         </Button>
         <Logo />
         <article className={classes.tag}>
-          <h3 className={classes.h3} >Afford </h3>
-          <h3 className={classes.h3} >the </h3>
-          <h3 className={classes.h3} >Adventure</h3>
+          <Typography variant="h4" className={classes.line} >Afford </Typography>
+          <Typography variant="h4" className={classes.line} >the </Typography>
+          <Typography variant="h4" className={classes.line} >Adventure</Typography>
         </article>
       </section>
       <section className={classes.splashMiddle}>
         <article>
-          <ul className={classes.details}>
-            <li className={classes.li}><h2>Plan</h2></li>
-            <li className={classes.li}><h2>Organize</h2></li>
-            <li className={classes.li}><h2>Budget</h2></li>
-          </ul>
+          <div className={classes.details}>
+            <Typography variant="h4" className={classes.detail}>Plan</Typography >
+           <Typography variant="h4" className={classes.detail}>Organize</Typography >
+           <Typography variant="h4" className={classes.detail}>Budget</Typography >
+          </div>
         </article>
       </section>
       <section className={classes.splashBottom}>
         <Logo2 />
         <div className={classes.cta}>
         <aside className={classes.quote}>
-          <h2>A <strong>Vacation</strong> is what you <em>take</em></h2>
-          <h2>When you can no longer <em>take</em></h2>
-          <h2>What you've been <em>taking</em>!</h2>
+          <Typography variant="h4">A <strong>Vacation</strong> is what you <em>take</em></Typography >
+          <Typography variant="h4">When you can no longer <em>take</em></Typography >
+          <Typography variant="h4">What you've been <em>taking</em>!</Typography >
           <p>Earl Wilson</p>
         </aside>
         <Button className={ classes.register } onClick={ () => loginWithRedirect({ screen_hint: "signup", }) }>
