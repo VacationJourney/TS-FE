@@ -5,7 +5,7 @@ export const useStyles = makeStyles(() => ({
     width: '100%',
     background: 'rgb(255,255,255, 0.2)',
     color: '#01386a',
-    boxShadow: '0 3px 3px'
+    boxShadow: '1px 3px 3px'
   },
   calTop: {
     display: 'flex',

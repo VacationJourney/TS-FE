@@ -10,7 +10,8 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: '2%',
     background: 'rgb(255,255,255,0.6)',
     boxSizing: 'border-box',
-    objectFit: 'contain'
+    objectFit: 'contain',
+    boxShadow: '1px 3px 3px'
   },
   dateTop: {
     width: '100%',

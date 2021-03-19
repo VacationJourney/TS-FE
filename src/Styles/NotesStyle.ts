@@ -8,6 +8,7 @@ export const useStyles = makeStyles((theme) => ({
 		position: 'relative',
 		background: 'rgb(255,255,255, 0.6)',
 		height: '80vh',
+		boxShadow: '1px 3px 3px',
 		[theme.breakpoints.up("md")]: {
 			height: '75vh',
 		},

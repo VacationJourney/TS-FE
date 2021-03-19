@@ -9,7 +9,10 @@ export const useStyles = makeStyles((theme) => ({
     padding: 5,
   },
   logoAnchor: {
-    width: '10%'
+    width: '10%',
+    [theme.breakpoints.up("md")]: {
+			width: '3%'
+		}
   },
   journeyCostLogo: {
     width: '100%',
