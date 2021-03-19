@@ -10,7 +10,7 @@ const ApolloWrapper = ({ children }) => {
   const history = useHistory()
   const [bearerToken, setBearerToken] = useState("")
   const urlLink = createHttpLink({
-    uri: process.env.REACT_APP_SERVER_URL || 'http://localhost:4000/',
+    uri: process.env.REACT_APP_ENDPOINT || 'http://localhost:4000/',
   });
 
   useEffect(() => {
