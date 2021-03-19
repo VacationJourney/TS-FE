@@ -1,11 +1,9 @@
 import React, { useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
-import { ApolloClient, createHttpLink, ApolloProvider } from '@apollo/client'
+import { ApolloClient, createHttpLink, ApolloProvider, InMemoryCache } from '@apollo/client'
 import { onError } from 'apollo-link-error'
-import {cache} from '../utils/Cache'
 import { setContext } from 'apollo-link-context'
 import { useAuth0 } from '@auth0/auth0-react'
-
 
 const ApolloWrapper = ({ children }) => {
   const { getAccessTokenSilently, isAuthenticated } = useAuth0()
@@ -50,9 +48,11 @@ const ApolloWrapper = ({ children }) => {
     }
   });
 
+  
+
   const client = new ApolloClient({
     link: errorLink.concat(authLink.concat(urlLink)),
-    cache,
+    cache: new InMemoryCache(),
   });
 
   return (
