@@ -16,7 +16,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   journeyCostLogo: {
     width: '100%',
-    transition: '.03s ease-in-out',
+    transition: '0.3s ease-in-out',
     '&:hover': {
       transform: 'scale(1.1)',
     }
@@ -31,7 +31,11 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'center'
   },
   menuItem: {
-    transition: '.03s ease-in-out',
+    transition: '0.3s ease-in-out',
     margin: '0 5px',
+    '&:hover': {
+      color: '#ff66c3',
+      transform: 'scale(1.1)'
+    }
   },
 }))

@@ -51,14 +51,16 @@ export const useStyles = makeStyles((theme) => ({
 	createNoteBtn: {
 		background: 'rgb(5,100,155)',
 		color: 'white',
-		width: '60%',
-		fontSize: '2rem',
-		borderRadius: '0 0 4px 4px ',
-		margin: '1%',
-		transition: '.3s ease-in-out',
+		width: '50%',
+		fontSize: '1.4rem',
+		borderRadius: '8px ',
+		margin: '2%',
+		transition: '0.3s ease-in-out',
+		boxShadow: '0 2px 2px black',
 		'&:hover': {
-			transform: 'scale(1.2)',
-			background: 'rgb(4,54,103)',
+			transform: 'scale(1.05)',
+			background: 'rgb(5,100,155)',
+			boxShadow: '0 4px 4px 2px black',
 		}
 	},
 	notes: {
