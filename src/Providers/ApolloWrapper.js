@@ -33,9 +33,9 @@ const ApolloWrapper = ({ children }) => {
   const errorLink = onError(({ graphQLErrors, networkError }) => {
     if (graphQLErrors) {
       graphQLErrors.map(({ message, locations, path }) => {
-        console.log(
-          `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-        )
+        // console.log(
+        //   `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+        // )
         if (message.includes('not authenticated')) {
           
           return history.push('/');
