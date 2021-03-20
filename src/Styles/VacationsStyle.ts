@@ -16,11 +16,13 @@ export const useStyles = makeStyles((theme) => ({
 		maxWidth: '100%',
 		maxHeight:'100vh',
     textAlign: 'center',
-		padding: 10,
+		padding: '0 5%',
 	},
 	picker: {
-		background: 'white',
+		fontSize: '1.5rem',
 		marginTop: '2%',
+		borderRadius: '8px',
+		border: ' 0 none',
 	},
 	form: {
 		display: 'flex',
@@ -30,10 +32,16 @@ export const useStyles = makeStyles((theme) => ({
 		margin: '1%',
 	},
 	submit: {
-		background: 'black',
-		color: 'white',
+		background: 'rgb(4,54,103, 0.2)',
 		fontSize: '1rem',
-		marginTop: '5%',
+		margin: '5% 0',
+		boxShadow: '0 1px 1px black',
+		transition: '0.3s ease-in-out',
+		'&:hover': {
+			boxShadow: '0 4px 4px 1px black',
+			background: 'rgb(4,54,103, 0.6)',
+			color: 'white'
+		}
 	},
 	edit: {
 		textDecoration: 'none',
@@ -45,9 +53,6 @@ export const useStyles = makeStyles((theme) => ({
 		textDecoration: 'none',
 		color: 'black',
 		width: '100%',
-		'&:hover': {
-			color: 'pink',
-		}
 	},
 	vacationCard: {
 		position: 'relative',
@@ -55,10 +60,10 @@ export const useStyles = makeStyles((theme) => ({
 		alignItems: 'center',
 		textAlign: 'center',
 		transition: '0.3s ease-in-out',
+		boxShadow: '0 3px 3px',
 		'&:hover': {
 			transform: 'scale(1.05)',
-			background: 'black',
-			boxShadow: '0 3px 3px'
+			boxShadow: '0 6px 6px 2px',
 		}
 	},
 	deleteButton: {

@@ -26,7 +26,7 @@ const Navbar = ({ picture, client }: NavProps) => {
   };
 
   return (
-    <div className={classes.navbar}>
+    <section className={classes.navbar}>
       <Link className={classes.logoAnchor} to={`${url}`}>
         <img src={JCost} className={classes.journeyCostLogo} alt="Journey Co$t Logo" />
       </Link>
@@ -45,7 +45,7 @@ const Navbar = ({ picture, client }: NavProps) => {
           <Menu exit={exit} />
         </Hidden>
       </nav>
-    </div>
+    </section>
   )
 }
 

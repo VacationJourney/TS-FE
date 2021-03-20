@@ -38,7 +38,7 @@ const VacationCard = ({ data, userId }: CardProps) => {
 
 	return (
 		<div className={classes.root}>
-			<Grid container spacing={2}>
+			<Grid container spacing={4}>
 				{data.vacations.map((trip: { id: string, title: string }, i: number) => (
 						<Grid item key={i} xs={12} sm={6} md={3} lg={3}>
 							<Card className={classes.vacationCard}>

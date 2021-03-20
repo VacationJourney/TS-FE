@@ -1,16 +1,16 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { useMutation } from '@apollo/react-hooks';
 import { CREATE_NOTE } from '../../graphQL/mutations/noteM'
 import { GET_ONE_TRIP } from '../../graphQL/queries'
 import NoteCard from './NoteCard'
-import { Typography, Grid, Paper, Box } from '@material-ui/core';
+import { Typography, Grid, Paper, Box, Button, TextField, TextareaAutosize } from '@material-ui/core';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
 import { useStyles } from '../../Styles/NotesStyle'
-import { TripProps, DateNoteProps, Note} from '../../types/types'
+import { TripProps, DateNoteProps, Note } from '../../types/types'
 
-const Notes = ({ trip, selected }: {trip: TripProps, selected: string}) => {
+const Notes = ({ trip, selected }: { trip: TripProps, selected: string }) => {
   const classes = useStyles();
   const [isAddingNote, setIsAddingNote] = useState(false)
   const { register, handleSubmit } = useForm();
@@ -37,22 +37,34 @@ const Notes = ({ trip, selected }: {trip: TripProps, selected: string}) => {
 
 
   return (
-    <Grid item md={ 6 } className={ classes.notesEdge }>
-      <Paper className={ classes.notesBox }>
-        <Box className={ classes.topNotesBox }>
+    <Grid item md={6} className={classes.notesEdge}>
+      <Paper className={classes.notesBox}>
+        <Box className={classes.topNotesBox}>
           <Typography variant="h4">Notes</Typography>
-          <AddBoxIcon className={ classes.addNoteBtn } onClick={() => setIsAddingNote(!isAddingNote)} />
+          <AddBoxIcon className={classes.addNoteBtn} onClick={() => setIsAddingNote(!isAddingNote)} />
         </Box>
-        <Box className={ classes.notes }>
-          { dateNotes[selected] && <NoteCard trip={trip} date={ dateNotes[selected] } /> }
+        <Box className={classes.notes}>
+          {dateNotes[selected] && <NoteCard trip={trip} date={dateNotes[selected]} />}
         </Box>
-        { isAddingNote ? (
-          <form className={ classes.noteForm } onSubmit={ handleSubmit(onSubmit) }>
-            <input type="text" className={classes.input} placeholder="title" name="title" ref={ register({ required: true }) } />
-            <textarea name="idea" className={classes.input} placeholder="idea" ref={ register } />
-            <input className={ classes.createNoteBtn } type="submit" />
+        {isAddingNote ? (
+          <form className={classes.noteForm} onSubmit={handleSubmit(onSubmit)}>
+            <TextField
+              type="text"
+              className={classes.input}
+              placeholder="Title"
+              name="title"
+              inputRef={register({ required: true })} /
+            >
+            <TextareaAutosize
+              name="idea" 
+              className={classes.input} 
+              rowsMin={3} 
+              placeholder="idea" 
+              ref={register} 
+              />
+            <Button className={classes.createNoteBtn} type="submit" >Submit</Button>
           </form>)
-          : null }
+          : null}
 
       </Paper>
     </Grid>

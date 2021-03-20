@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core'
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles((props) => ({
   calendar: {
     width: '100%',
     background: 'rgb(255,255,255, 0.2)',
@@ -24,11 +24,10 @@ export const useStyles = makeStyles(() => ({
   },
   addDateIcon: {
     fontSize: '1.5rem',
-    transition: '.3s ease-in-out',
+    transition: '0.3s ease-in-out',
     '&:hover': {
       transform: 'scale(1.1)',
-      color: '#ff66c3',
-    }
+    },
   },
   addDateButton: {
     color: 'grey',
@@ -39,12 +38,11 @@ export const useStyles = makeStyles(() => ({
   },
   arrows: {
     fontSize: '3rem',
-    transition: '.3s ease-in-out',
+    transition: '0.3s ease-in-out',
     '&:hover': {
       transform: 'scale(1.5)',
       color: '#ff66c3',
     }
-
   },
   grid: {
     display: 'grid',
@@ -83,19 +81,21 @@ export const useStyles = makeStyles(() => ({
     fontSize: '1.2rem',
     color: 'white',
     padding: '2px',
-    transition: '.3s ease-in-out',
+    transition: '0.3s ease-in-out',
     '&:hover': {
-      transform: 'scale(1.1)',
-      background: '#056099'
+      transform: 'scale(1.05)',
+      background: '#056099',
+      boxShadow: '0 3px 3px 0.5px black',
     }
   },
   tripDate: {
     background: 'white',
     color: '#056099',
     border: '2px solid #056099',
-    transition: '.3s ease-in-out',
+    transition: '0.3s ease-in-out',
     '&:hover': {
       transform: 'scale(1.05)',
+      boxShadow: '0 3px 3px 0.5px black',
       background: 'white',
     }
   },
@@ -107,14 +107,22 @@ export const useStyles = makeStyles(() => ({
   addDates: {
     background: '#ff66c3',
     color: 'black',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     border: '1px solid black',
-    transition: '.3s ease-in-out',
+    transition: '0.3s ease-in-out',
     '&:hover': {
-      transform: 'scale(1.1)',
+      transform: 'scale(1.05)',
+      boxShadow: '0 3px 3px 0.5px black',
+
     }
   },
   add: {
     fontSize: '10px'
+  },
+  plus: {
+    margin: '0 5px'
   },
   dateTop: {
     width: '100%',
