@@ -52,7 +52,7 @@ const CustomizedMenus = ({exit}) => {
 	};
 
 	return (
-		<div>
+		<nav>
 			<MenuIcon
 				aria-controls='customized-menu'
 				aria-haspopup='true'
@@ -79,7 +79,7 @@ const CustomizedMenus = ({exit}) => {
 					</ListItemIcon>
 				</StyledMenuItem>
 			</StyledMenu>
-		</div>
+		</nav>
 	);
 };
 export default CustomizedMenus;
